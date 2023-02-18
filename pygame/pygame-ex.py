@@ -1,8 +1,10 @@
 import os
 
-os.system('python ../figlet.py --message "PyMath"')
+# Dictionary of excluded files
+excluded_files = {'data.json': True, 'data.py': True, 'pygame_current_date.py': True, 'pygame_saved_score.json': True, 'pygame_test_alphabet2num.py': True}
+
 # Get the list of Python files in the current directory
-files = [file for file in os.listdir('.') if file.endswith('.py') and file != os.path.basename(__file__)]
+files = [file for file in os.listdir('.') if file.endswith('.py') and file != os.path.basename(__file__) and file not in excluded_files]
 
 # Display the list of files in the format [item number] filename.py
 for i, file in enumerate(files):
