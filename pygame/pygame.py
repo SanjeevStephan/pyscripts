@@ -3,7 +3,7 @@
 # author : Sanjeev Stephan Murmu
 import os 
 
-figlet_path = "D:\\myscripts\\poweruser\\figlet.py"
+figlet_path = "D:\\terminal\\py\\figlet.py"
 
 list_of_games = {"Learn Alphabet position":"D:\\myscripts\\script.py\\pygame\\learn_alphabet_positions\\python-game-alphabet-position.py",
                 "Muliplicaiton [Calculator]":"D:\\myscripts\\script.py\\pygame\maths\\101_input_multiply.py",
@@ -25,7 +25,8 @@ class pygame:
         os.system('cls')  # Clears the Screen first
  
     def displayMsg(path_num=0, msg="pygame"):
-        os.system("python {} --message {}".format(figlet_path,msg)) # display the pygame-welcome test 
+       os.system("python {} --message {}".format(figlet_path,msg)) # display the pygame-welcome test 
+       #  os.system('figlet "PyGame"')
 
     def excuteScript(path_num):
         #path_num=path_num+1
