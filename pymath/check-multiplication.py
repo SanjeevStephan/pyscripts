@@ -4,7 +4,7 @@
 import os
 import argparse
 # My LIbrary
-import data
+import current_data
 
  # Clears the Screen before running the main functions
 def clear_the_screen_first():
@@ -15,7 +15,7 @@ def multiply(a,b):
     text = "{} x {} = {}"
     formattedText = text.format(a,b,result)
     print("[Answer] The Multiplication of " + formattedText)
-    data.welcome_text(formattedText)
+    current_data.welcome_text(formattedText)
 
 def multiple_ques():
     for i in range(1000):
@@ -30,15 +30,15 @@ def userinput(num):
 
 if __name__ == "__main__":
     clear_the_screen_first()                   # Clears the Screen before running the main functions
-    data.welcome_text(data.multiply.title)        # call the 'welcome_text()' to display text from [data.py]
-    print(data.author.msg_to_display)             # Display Author Signature from [data.py]
-    data.horizontal_line                          # Horizontal Line
+    current_data.welcome_text(current_data.multiply.title)        # call the 'welcome_text()' to display text from [data.py]
+    print(current_data.author.msg_to_display)             # Display Author Signature from [data.py]
+    current_data.horizontal_line                          # Horizontal Line
     multiple_ques()                               # run a 'for' loop to ask multiple_questions
 
 # FUNCTION NOT IN USE
 def para():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--message",type=str,default=data.multiply.title, help="Multiply two number -a <num> -b <num>")
+    parser.add_argument("--message",type=str,default=current_data.multiply.title, help="Multiply two number -a <num> -b <num>")
     parser.add_argument("--a",type=int,help="First number")
     parser.add_argument("--b",type=int,help="Second number")
     args = parser.parse_args()

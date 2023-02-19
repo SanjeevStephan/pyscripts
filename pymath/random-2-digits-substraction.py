@@ -92,14 +92,14 @@ def playAgain(total_questions,NUM_QUESTIONS):
 def saveTheGameInJSON(correct_answers,total_questions):
     # Save the score and date/time of the game in a JSON file
     score = {"date": str(today), "score": "You got {} out of {} questions correct!".format(correct_answers, total_questions)}
-    with open("score_substract_random_12to19.json", "w") as f:
+    with open("score-random-2-digits-substraction.json", "w") as f:
         json.dump(score, f)
-    print("Game Progess saved in 'saved_score_random_12to19.json'")
+    print("Game Progess saved in 'score-random-2-digits-substraction.json'")
 
 def loadTheGameScore():
     # Load the last score from the JSON file
     try:
-        with open("score_substract_random_12to19.json", "r") as f:
+        with open("score-random-2-digits-substraction.json", "r") as f:
             last_score = json.load(f)
             print("[Saved]Last score on {} {}".format(last_score["date"], last_score["score"]))
     except FileNotFoundError:
