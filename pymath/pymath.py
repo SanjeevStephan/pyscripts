@@ -2,7 +2,8 @@ import os
 
 os.system('python ../figlet.py --message "PyMath"')
 # Get the list of Python files in the current directory
-files = [file for file in os.listdir('.') if file.endswith('.py') and file != os.path.basename(__file__)]
+# and file !=os.startfile('pymath')
+files = [file for file in os.listdir('.') if file.endswith('.bat') and file != os.path.basename(__file__) ]
 
 # Display the list of files in the format [item number] filename.py
 for i, file in enumerate(files):
