@@ -22,5 +22,6 @@ while True:
 # Execute the selected file
 selected_file = files[item_number-1]
 print("Executing file:", selected_file)
-exec(open(selected_file).read())
+# exec(open(selected_file).read())
+
 

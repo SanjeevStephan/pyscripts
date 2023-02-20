@@ -6,6 +6,12 @@ import json
 import current_date
 
 today = current_date.getCurrentDate()
+script_title_header = "Random Substraction"
+script_ques_range = "between 12 to 99"
+script_title = script_title_header + script_ques_range
+saved_score_path = "score-random-2-digits-substraction.json"
+ques_range_start_from = 12
+ques_range_start_to = 99
 
 def showCoolText(msg):
     text_to_be_displayed='python D:\\terminal\\py\\figlet.py --message "{}"'
@@ -21,8 +27,8 @@ def setNumOfQues():
 
 def randomMultiplication():
     # Define the range of numbers for the questions
-    MIN_NUM = 12
-    MAX_NUM = 99
+    MIN_NUM = ques_range_start_from
+    MAX_NUM = ques_range_start_to
 
     # Define the number of questions to ask
     #NUM_QUESTIONS = 10
@@ -48,7 +54,11 @@ def randomMultiplication():
         answer = input("[ {} ] What is {} - {}? = ".format(num_of_questions_left,num1, num2))
     
         # Check if the user's answer is correct
-        substract_num = int(num1 - num2)
+        substract_num = int(0)
+
+        if num1 > num2 :  substract_num = int(num1 - num2) 
+        else : substract_num = int(num2 - num1) 
+
         if int(answer) == substract_num :
             correct_answers += 1 # Add '1' every time correct answer
             print(score("Status-> Correct",correct_answers,NUM_QUESTIONS)) # Status
@@ -91,15 +101,15 @@ def playAgain(total_questions,NUM_QUESTIONS):
     
 def saveTheGameInJSON(correct_answers,total_questions):
     # Save the score and date/time of the game in a JSON file
-    score = {"date": str(today), "score": "You got {} out of {} questions correct!".format(correct_answers, total_questions)}
-    with open("score-random-2-digits-substraction.json", "w") as f:
+    score = {"date": str(today), "score": "You got {} out of {} questions correct in {}!".format(correct_answers, total_questions, script_title)}
+    with open(saved_score_path, "w") as f:
         json.dump(score, f)
-    print("Game Progess saved in 'score-random-2-digits-substraction.json'")
+    print("Game Progess saved in '{}'".format(saved_score_path))
 
 def loadTheGameScore():
     # Load the last score from the JSON file
     try:
-        with open("score-random-2-digits-substraction.json", "r") as f:
+        with open(saved_score_path, "r") as f:
             last_score = json.load(f)
             print("[Saved]Last score on {} {}".format(last_score["date"], last_score["score"]))
     except FileNotFoundError:
@@ -108,8 +118,8 @@ def loadTheGameScore():
 
 if __name__ == "__main__":
     os.system("cls")
-    showCoolText("Random Substraction")
-    showCoolText("between 12 to 99")
+    showCoolText(script_title_header)
+    showCoolText(script_ques_range)
     loadTheGameScore()
     print("Today is {}. Lets Play a New Game".format(today))
     randomMultiplication()
