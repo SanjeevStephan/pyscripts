@@ -3,7 +3,7 @@ import os
 os.system('python ../figlet.py --message "PyMath"')
 # Get the list of Python files in the current directory
 # and file !=os.startfile('pymath')
-files = [file for file in os.listdir('.') if file.endswith('.bat') and file != os.path.basename(__file__) ]
+files = [file for file in os.listdir('.') if file.endswith('.py') and file != os.path.basename(__file__) ]
 
 # Display the list of files in the format [item number] filename.py
 for i, file in enumerate(files):
@@ -22,6 +22,6 @@ while True:
 # Execute the selected file
 selected_file = files[item_number-1]
 print("Executing file:", selected_file)
-# exec(open(selected_file).read())
+exec(open(selected_file).read())
 
 
