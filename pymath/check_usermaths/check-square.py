@@ -5,7 +5,7 @@ import os
 import pyfiglet
 import argparse
 # my library
-import data
+import current_data
 
 
  # Clears the Screen before running the main functions
@@ -37,9 +37,9 @@ def sqaure(num_to_sq):
 
 if __name__ == "__main__":
     clear_the_screen_first()
-    welcome_text(data.square.title)
-    print(data.author.msg_to_display)
-    data.horizontal_line
+    welcome_text(current_data.square.title)
+    print(current_data.author.msg_to_display)
+    current_data.horizontal_line
     multiple_ques()
 
 
