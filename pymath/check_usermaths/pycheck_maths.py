@@ -1,6 +1,6 @@
 import os
 
-os.system('python ../figlet.py --message "PyMath"')
+os.system('python ../../figlet.py --message "Check Math"')
 # Get the list of Python files in the current directory
 # and file !=os.startfile('pymath')
 files = [file for file in os.listdir('.') if file.endswith('.py') and file != os.path.basename(__file__) ]
