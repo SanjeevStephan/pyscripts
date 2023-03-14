@@ -8,7 +8,7 @@ import current_date
 today = current_date.getCurrentDate()
 
 def showCoolText(msg):
-    text_to_be_displayed='python D:\\myscripts\\poweruser\\figlet.py --message "{}"'
+    text_to_be_displayed='python D:\\terminal\\py\\figlet.py --message "{}"'
     os.system(text_to_be_displayed.format(msg))
 
 def score(status="Status",correct_num_of_answers=0, total_num_of_questions=0):
