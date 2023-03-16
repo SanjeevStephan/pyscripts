@@ -34,8 +34,8 @@ def setNumOfQues():
 
 def randomMultiplication():
     # Define the range of numbers for the questions
-    MIN_NUM = 10
-    MAX_NUM = 99
+    MIN_NUM = 1
+    MAX_NUM = 999
 
     # Define the number of questions to ask
     #NUM_QUESTIONS = 10
