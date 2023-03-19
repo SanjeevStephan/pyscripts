@@ -1,0 +1,17 @@
+{
+    "multiplication_of_2_digits": {
+        "quiz": "multiplication_of_2_digits",
+        "date": "Today",
+        "score": "You got 21 out of 30 questions correct!"
+    },
+    "multiplication_of_3_digits": {
+        "quiz": "multiplication_of_3_digits",
+        "date": "Yesterday",
+        "score": "You got 12 out of 15 questions correct!"
+    },
+    "substraction_of_2_digits": {
+        "quiz": "substraction_of_2_digits",        
+        "date": "16 March 2023",
+        "score": "You got 2 out of 3 questions correct!"
+    }
+}
