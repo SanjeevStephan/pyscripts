@@ -13,8 +13,8 @@ with open(filename, "r") as file:
 
 # Add the new module information to the existing data
 data[pymath_title] = {
-    "desc": pymath_date,
-    "syntax": pymath_score
+    "date": pymath_date,
+    "score": pymath_score
 }
 
 # Write the updated JSON data back to the file

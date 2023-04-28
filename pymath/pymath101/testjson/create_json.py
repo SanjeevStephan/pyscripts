@@ -1,5 +1,5 @@
 import json
-import read_json
+import testjson.display_json as display_json
 
 # Define the Sample JSON data
 data = {
@@ -29,6 +29,6 @@ with open(filename, "w") as f:
 
 # Print the JSON string to the console
 print(data)
-read_json(filename)
+display_json(filename)
 #os.system("rm {}".format(filename))
 #print("File {} Cleared Successfully".format(filename))
