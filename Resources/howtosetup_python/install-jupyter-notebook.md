@@ -1,16 +1,8 @@
-# pyscripts
 
- This Repository contains all the python scripts
-
-# Download
-
-* JupyterLab Notebooks ( https://github.com/jupyterlab/jupyterlab-desktop/releases )
 
 ## Getting Started With Python
 
 Installing Jupyter Notebook in Windows 11 is a straightforward process. First, you’ll need to install Python, then use pip to install Jupyter Notebook. Once that’s done, you can launch Jupyter Notebook and start working on your projects. [Read Source](https://www.solveyourtech.com/how-to-install-jupyter-notebook-in-windows-11-a-step-by-step-guide/)
-
->  Works On Windows
 
 | STEPS                       | COMMANDS                                                    |
 | --------------------------- | ----------------------------------------------------------- |
@@ -40,15 +32,17 @@ When you install Python, make sure to check the box that says “Add Python to P
 
 verify if pip is already installed by typing `pip --version` . If not, install it by typing `python -m ensurepip --upgrade`.
 
+
 | FOLLOW THESE STEPS         | COMMAND                                     |
 | -------------------------- | ------------------------------------------- |
 | Verify If PIP is Installed | `pip --version`                           |
 | Install Python PIP         | ``python -m ensurepip --upgrade``           |
 | Upgrad PIP If Needed       | `python.exe -m pip install --upgrade pip` |
 
-> Note
+>  Note 
 >
 > Pip is the package installer for Python, and it’s what you’ll use to install Jupyter Notebook. If pip is already installed, you can skip this step.
+
 
 ### Step 4 : Install Jupyter Notebook
 
