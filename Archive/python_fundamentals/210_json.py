@@ -36,8 +36,6 @@ def convert_from_python2json():
     # the resutl is a JSON string:
     print(stored_json_text)
 
-
-
 #if "__name__" == (mai)
 #convert_from_json2python()
 convert_from_python2json()
